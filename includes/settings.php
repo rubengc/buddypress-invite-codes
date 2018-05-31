@@ -16,7 +16,7 @@
  */
 function bp_invite_codes_create_settings_menu() {
 
-	add_menu_page( 'BP Invite Codes', 'BP Invite Codes', 'manage_options', 'bp_invite_codes_settings', 'bp_invite_codes_settings_page', plugins_url( 'learningtimes_icon.png', __FILE__ ) );
+	add_menu_page( 'BP Invite Codes', 'BP Invite Codes', 'manage_options', 'bp_invite_codes_settings', 'bp_invite_codes_settings_page', 'dashicons-tickets' );
 	add_submenu_page( 'bp_invite_codes_settings', 'BP Invite Code Settings', 'Settings', 'manage_options', 'bp_invite_codes_settings', 'bp_invite_codes_settings_page' );
 
 }

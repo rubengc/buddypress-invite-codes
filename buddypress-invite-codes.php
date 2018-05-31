@@ -4,35 +4,19 @@
  * Plugin URI:
  * Description: Add members to groups based on invite codes.
  * Tags: buddypress, invite codes, invite, groups, invitation
- * Author: Credly, LLC
- * Version: 1.1.1
- * Author URI: https://credly.com/
+ * Author: Ruben Garcia
+ * Version: 1.0.0
+ * Author URI: https://wordpress.org/
  * License: GNU AGPLv3
  * License URI: http://www.gnu.org/licenses/agpl-3.0.html
  *
  * @package BuddyPress Invite Codes
- * @version 1.1.1
+ * @version 1.0.0
  */
-
-/*
- * Copyright © 2012-2013 Credly, LLC
- *
- * This program is free software: you can redistribute it and/or modify it
- * under the terms of the GNU Affero General Public License, version 3,
- * as published by the Free Software Foundation.
- *
- * This program is distributed in the hope that it will be useful, but
- * WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
- * or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero General
- * Public License for more details.
- *
- * You should have received a copy of the GNU Affero General Public License
- * along with this program.  If not, see <http://www.gnu.org/licenses/>;.
-*/
 
 class BuddyPress_Invite_Codes {
 
-	public $version = '1.1.1';
+	public $version = '1.0.0';
 
 	public $basename;
 	public $directory_path;
