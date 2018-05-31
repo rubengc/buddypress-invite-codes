@@ -54,6 +54,9 @@ class BuddyPress_Invite_Codes {
 	public function bp_include() {
 
 		if ( $this->meets_requirements() ) {
+
+			require_once( $this->directory_path . 'cmb2/init.php' );
+
 			if ( is_admin() ) {
 				require_once( $this->directory_path . 'includes/settings.php' );
 			}

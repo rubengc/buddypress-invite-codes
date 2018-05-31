@@ -334,9 +334,7 @@ add_filter( 'post_updated_messages', 'bp_invite_codes_post_updated_messages_filt
  *
  * @since  1.0.0
  */
-function bp_invite_codes_meta_box( array $meta_boxes ) {
-
-	global $post_ID;
+function bp_invite_codes_meta_box() {
 
 	$prefix = '_bp_invite_codes_';
 
@@ -346,10 +344,10 @@ function bp_invite_codes_meta_box( array $meta_boxes ) {
 		$default_invite_code = wp_generate_password( 7, false );
 	}
 
-	$meta_boxes[] = array(
+	new_cmb2_box( array(
 		'id' => 'invitation_metabox',
 		'title' => 'Invitation Data',
-		'pages' => array( 'bp-invite-codes' ), // Post type
+		'object_types' => array( 'bp-invite-codes' ), // Post type
 		'context' => 'normal',
 		'priority' => 'high',
 		'show_names' => true, // Show field names on the left
@@ -380,12 +378,10 @@ function bp_invite_codes_meta_box( array $meta_boxes ) {
 				'type' => 'text_date',
 			),
 		),
-	);
-
-	return $meta_boxes;
+	) );
 
 }
-add_filter( 'cmb_meta_boxes', 'bp_invite_codes_meta_box' );
+add_action( 'cmb2_admin_init', 'bp_invite_codes_meta_box' );
 
 /**
  * Show custom columns for bp-invite-codes cpt
