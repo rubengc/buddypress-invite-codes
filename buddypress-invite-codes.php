@@ -1,9 +1,9 @@
 <?php
 /**
- * Plugin Name: BuddyPress Invite Codes for BadgeOS
+ * Plugin Name: BuddyPress Invite Codes
  * Plugin URI:
  * Description: Add members to groups based on invite codes.
- * Tags: buddypress, invite codes, invite, badgeos, badges, groups, invitation
+ * Tags: buddypress, invite codes, invite, groups, invitation
  * Author: Credly, LLC
  * Version: 1.1.1
  * Author URI: https://credly.com/
@@ -51,7 +51,7 @@ class BuddyPress_Invite_Codes {
 		// Run our activation
 		register_activation_hook( __FILE__, array( $this, 'activate' ) );
 
-		// If BadgeOS is unavailable, deactivate our plugin
+		// If BuddyPress is unavailable, deactivate our plugin
 		add_action( 'admin_notices', array( $this, 'maybe_disable_plugin' ) );
 
 		add_action( 'bp_include', array( $this, 'bp_include' ) );
@@ -128,14 +128,14 @@ class BuddyPress_Invite_Codes {
 	}
 
 	/**
-	 * Check if BadgeOS is available
+	 * Check if BuddyPress is available
 	 *
 	 * @since  1.0.0
-	 * @return bool True if BadgeOS is available, false otherwise
+	 * @return bool True if BuddyPress is available, false otherwise
 	 */
 	public static function meets_requirements() {
 
-		if ( class_exists( 'BadgeOS' ) && function_exists( 'badgeos_get_user_earned_achievement_types' ) && class_exists( 'BP_Groups_Group' ) ) {
+		if ( class_exists( 'BuddyPress' ) && class_exists( 'BP_Groups_Group' ) ) {
 			return true;
 		}
 		else {
@@ -155,10 +155,7 @@ class BuddyPress_Invite_Codes {
 			// Display our error
 			echo '<div id="message" class="error">';
 
-			if ( !class_exists( 'BadgeOS' ) || !function_exists( 'badgeos_get_user_earned_achievement_types' ) ) {
-				echo '<p>' . sprintf( __( 'BuddyPress Invite Codes requires BadgeOS and has been <a href="%s">deactivated</a>. Please install and activate BadgeOS and then reactivate this plugin.', 'bp-invite-codes' ), admin_url( 'plugins.php' ) ) . '</p>';
-			}
-			elseif ( !class_exists( 'BuddyPress' ) ) {
+			if ( !class_exists( 'BuddyPress' ) ) {
 				echo '<p>' . sprintf( __( 'BuddyPress Invite Codes requires BuddyPress and has been <a href="%s">deactivated</a>. Please install and activate BuddyPress and then reactivate this plugin.', 'bp-invite-codes' ), admin_url( 'plugins.php' ) ) . '</p>';
 			}
 			elseif ( !class_exists( 'BP_Groups_Group' ) || !bp_is_active( 'groups' ) ) {
