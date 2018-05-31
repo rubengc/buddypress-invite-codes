@@ -1,0 +1,45 @@
+.bp-invite-codes-admin .checkbox-overflow {
+	width: 450px;
+	max-height: 900px;
+	padding: 5px;
+
+	overflow: auto;
+
+	border: 1px solid #CCC;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-khtml-border-radius: 3px;
+	border-radius: 3px;
+}
+
+.bp-invite-codes-admin .checkbox-overflow ul,
+.bp-invite-codes-admin .checkbox-overflow li {
+	margin: 0;
+	list-style: none;
+}
+
+.bp-invite-codes-admin .checkbox-overflow li {
+	min-height: 22px;
+	padding: 10px;
+}
+
+.bp-invite-codes-admin .checkbox-overflow li:nth-child(even) {
+	background-color: #E7E7E7;
+}
+
+.bp-invite-codes-admin .checkbox-overflow li input {
+	vertical-align: middle;
+}
+
+#bp_invite_codes_groups_meta_box li label span.actions,
+.bp-invite-codes-admin .checkbox-overflow li label span.actions {
+	display: none;
+
+	margin-left: 4px;
+	font-size: 0.8em;
+}
+
+#bp_invite_codes_groups_meta_box li:hover label span.actions,
+.bp-invite-codes-admin .checkbox-overflow li:hover label span.actions {
+	display: inline;
+}
