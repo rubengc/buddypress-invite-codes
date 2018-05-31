@@ -11,9 +11,9 @@ Enhances sites running BuddyPress by joining users to one or more specified grou
 
 == Description ==
 
-This add-on plugin to [BuddyPress](http://wordpress.org/extend/plugins/buddypress/ "BuddyPress") automatically joins a user to one or more BuddyPress groups when they use a corresponding Invite Code upon joining your site.
+This add-on plugin to [BuddyPress](http://wordpress.org/plugins/buddypress/ "BuddyPress") automatically joins a user to one or more BuddyPress groups when they use a corresponding Invite Code upon joining your site.
 
-**Note:** You will need [BuddyPress](http://wordpress.org/extend/plugins/buddypress/ "BuddyPress") v1.7 or higher installed to use this plugin.
+**Note:** You will need [BuddyPress](http://wordpress.org/plugins/buddypress/ "BuddyPress") v1.7 or higher installed to use this plugin.
 
 *   **Features:**
 
@@ -36,6 +36,22 @@ This add-on plugin to [BuddyPress](http://wordpress.org/extend/plugins/buddypres
 5. Visit the new "BP Invite Codes" menu to configure the plugin, and visit "All invite Codes" to add new codes or manage existing ones.
 
 == Frequently Asked Questions ==
+
+= Why is this plugin here and not on WordPress.org? =
+
+Hi! I'm Ruben Garcia, author and founder of [GamiPress](http://wordpress.org/plugins/gamipress/ "GamiPress"), some users has requested a similar add-on similar to the abandoned BadgeOS Invite Codes.
+
+I just checked the code of this add-on and found that BadgeOS requirements are purely advertising and not a real requirement to make it work. This plugin doesn't makes any specific use of BadgeOS so the unique real requirement is BuddyPress now.
+
+If you want to award your users by joining a group from an invite code, now you can use the [GamiPress - BuddyPress integration](https://wordpress.org/plugins/gamipress-buddypress-integration/ "GamiPress") or the BadgeOS community add-on.
+
+= Are you maintaining this plugin? =
+
+No, Our teams need to be focused in the development of GamiPress, this plugin is just focused on BuddyPress and we can't support plugins that aren't for GamiPress.
+
+= Can I release this plugin on WordPress.org? =
+
+Yes, If you want to adopt this plugin feel free to do it, but you will need to revise some internal functions to meet with the WordPress coding standards.
 
 == Screenshots ==
 
